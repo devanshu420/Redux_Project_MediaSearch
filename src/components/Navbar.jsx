@@ -2,21 +2,29 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="
+    <div
+      className="
       flex justify-between items-center px-12 py-5
       from-indigo-600 via-purple-600 to-indigo-700
       shadow-lg
-    ">
+    "
+    >
       {/* Logo */}
-      <Link
-        to="/"
-        className="
-          text-2xl font-bold tracking-wide text-white
-          hover:scale-105
-          transition-transform duration-300 ease-out
-        "
-      >
-        MediaSearch
+      <Link to="/">
+        <img
+          src="logo.png"
+          alt="MediaSearch Logo"
+          className="
+      h-24 w-auto
+      cursor-pointer
+      mix-blend-screen
+      bg-transparent
+      scale-110
+      transition-all duration-300 ease-out
+     
+      active:scale-100
+    "
+        />
       </Link>
 
       {/* Links */}

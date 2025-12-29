@@ -26,7 +26,7 @@ const SearchBar = () => {
     <div
       className={`
         flex flex-col items-center
-        px-4
+        px-4 
         transition-all duration-500 ease-out
         ${searched ? "mt-10" : "mt-40"} 
       `}

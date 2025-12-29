@@ -1,8 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addCollection, addedToast } from '../redux/features/collectionSlice'
 
 const ResultCard = ({ item, idx }) => {
 
-    
+  const dispatch = useDispatch();
+
+     const addToCollection = (item) => {
+        dispatch(addCollection(item))
+        dispatch(addedToast())
+        
+    }  
+
   return (
     <div className="w-[17vw] mx-1 relative h-80 bg-white rounded-2xl mt-6 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group">
       <a target="_blank" className="h-full block" href={item.url}>
@@ -45,7 +54,11 @@ const ResultCard = ({ item, idx }) => {
           {item.title}
         </h2>
 
-        <button className="bg-indigo-600 hover:bg-indigo-500 active:scale-95 transition-all duration-200 text-white rounded-lg px-3 py-1 font-medium shadow-md">
+        <button 
+          onClick={() => {
+            addToCollection(item)
+          }}
+          className="bg-indigo-600 hover:bg-indigo-500 cursor-pointer active:scale-95 transition-all duration-200 text-white rounded-lg px-3 py-1 font-medium shadow-md">
           Save
         </button>
       </div>
