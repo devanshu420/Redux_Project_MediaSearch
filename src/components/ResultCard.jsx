@@ -4,7 +4,7 @@ const ResultCard = ({ item, idx }) => {
 
     
   return (
-    <div className="w-[17vw] mx-1 relative h-80 bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group">
+    <div className="w-[17vw] mx-1 relative h-80 bg-white rounded-2xl mt-6 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group">
       <a target="_blank" className="h-full block" href={item.url}>
         {item.type === "photo" ? (
           <img
@@ -34,7 +34,7 @@ const ResultCard = ({ item, idx }) => {
       </a>
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+      <div className="absolute inset-0  from-black/70 via-black/20 to-transparent"></div>
 
       {/* Bottom section */}
       <div
